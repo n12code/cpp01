@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   randomChump.cpp                                    :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nbodin <nbodin@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/15 18:56:13 by nbodin            #+#    #+#             */
-/*   Updated: 2025/10/16 17:28:08 by nbodin           ###   ########lyon.fr   */
+/*   Created: 2025/10/16 17:05:50 by nbodin            #+#    #+#             */
+/*   Updated: 2025/10/16 17:53:57 by nbodin           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/Zombie.hpp"
 
-void    randomChump(std::string name)
+Zombie::Zombie() {}
+Zombie::~Zombie()
 {
-    Zombie zombie;
+    std::cout << this->_name << " is destructed" << std::endl;
+}
 
-    zombie.setName(name);
-    zombie.announce();
+void    Zombie::announce()
+{
+    std::cout << this->_name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+}
+
+void    Zombie::setName(std::string name)
+{
+    this->_name = name;
 }

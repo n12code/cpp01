@@ -3,8 +3,7 @@
         {
             "name": "Linux",
             "includePath": [
-                "${default}",
-                "${workspaceFolder}/ex00/inc"
+                "${default}"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/clang",

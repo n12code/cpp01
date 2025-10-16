@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   randomChump.cpp                                    :+:      :+:    :+:   */
+/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nbodin <nbodin@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/15 18:56:13 by nbodin            #+#    #+#             */
-/*   Updated: 2025/10/16 17:28:08 by nbodin           ###   ########lyon.fr   */
+/*   Created: 2025/10/16 17:05:47 by nbodin            #+#    #+#             */
+/*   Updated: 2025/10/16 18:08:35 by nbodin           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/Zombie.hpp"
 
-void    randomChump(std::string name)
+Zombie* zombieHorde(int N, std::string name)
 {
-    Zombie zombie;
+    std::size_t i;
+    Zombie*  zombies = new (std::nothrow) Zombie[N];
+    if (!zombies)
+        return (NULL);
 
-    zombie.setName(name);
-    zombie.announce();
+    i = 0;
+    while (i < (std::size_t)N)
+    {
+        zombies[i].setName(name);
+        i++;
+    }
+    return (zombies);
 }
