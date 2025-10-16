@@ -1,32 +1,26 @@
-NAME = zombie
+NAME = brain
 CXX = g++
 CXXFLAGS = -g -Wall -Wextra -Werror -std=c++98
-I_FLAGS = -I$(INC_DIR)
 
 OBJ_DIR = obj
-SRC_DIR = src
-INC_DIR = inc
+SRC_DIR = .
 
-FILES = main zombieHorde Zombie
+FILES = main
 
 SRC = $(addprefix $(SRC_DIR)/, $(addsuffix .cpp, $(FILES)))
 OBJ = $(addprefix $(OBJ_DIR)/, $(addsuffix .o, $(FILES)))
-
-HEADERS = Zombie.hpp
-HEADERS := $(addprefix $(INC_DIR)/, $(HEADERS))
-
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	@echo "compiling the binary\n"
-	$(CXX) $(CXXFLAGS) $(I_FLAGS) $(OBJ) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 	@echo "\nprogram created"
 
-$(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp $(HEADERS)
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
 	@echo "compiling the obj"
 	@mkdir -p $(OBJ_DIR)
-	@$(CXX) $(CXXFLAGS) $(I_FLAGS) -c $< -o $@
+	@$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
 	@echo "removing obj"
