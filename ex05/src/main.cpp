@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanB.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nbodin <nbodin@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/17 14:49:24 by nbodin            #+#    #+#             */
-/*   Updated: 2025/10/22 22:47:45 by nbodin           ###   ########lyon.fr   */
+/*   Created: 2025/10/22 10:15:11 by nbodin            #+#    #+#             */
+/*   Updated: 2025/10/22 14:40:13 by nbodin           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../inc/HumanB.hpp"
+#include "../inc/Harl.hpp"
 
-HumanB::HumanB(std::string name) : _name(name) {}
-HumanB::~HumanB() {}
-
-void    HumanB::attack()
+int	main()
 {
-    std::cout << this->_name << " attacks with their " << this->_weapon->getType() << std::endl; 
-}
+	Harl	harl;
 
-void    HumanB::setWeapon(Weapon& weapon)
-{
-    this->_weapon = &weapon;
+	harl.complain("debug");
+	std::cout << std::endl;
+	harl.complain("info");
+	std::cout << std::endl;
+	harl.complain("wArning");
+	std::cout << std::endl;
+	harl.complain("ERROR");
+	std::cout << std::endl;
+	harl.complain("what the helly");
+	return (0);
 }
