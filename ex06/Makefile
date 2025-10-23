@@ -1,4 +1,4 @@
-NAME = harl
+NAME = harlFilter
 CXX = g++
 CXXFLAGS = -g -Wall -Wextra -Werror -std=c++98
 I_FLAGS = -I$(INC_DIR)

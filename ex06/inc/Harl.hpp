@@ -6,7 +6,7 @@
 /*   By: nbodin <nbodin@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 22:48:24 by nbodin            #+#    #+#             */
-/*   Updated: 2025/10/22 22:48:26 by nbodin           ###   ########lyon.fr   */
+/*   Updated: 2025/10/23 10:44:32 by nbodin           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,14 @@
 # define HARL_HPP
 
 # include <iostream>
+
+enum Level {
+	DEBUG = 0,
+	INFO = 1,
+	WARNING = 2,
+	ERROR = 3,
+	UNKNOWN = 4
+};
 
 class Harl
 {

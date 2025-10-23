@@ -6,7 +6,7 @@
 /*   By: nbodin <nbodin@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 10:58:20 by nbodin            #+#    #+#             */
-/*   Updated: 2025/10/22 23:23:31 by nbodin           ###   ########lyon.fr   */
+/*   Updated: 2025/10/23 10:54:55 by nbodin           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,12 @@ void Harl::complain(std::string level)
 		"warning"
 	};
 	std::size_t	i = 0;
-	
-	std::transform(level.begin(), level.end(), level.begin(), ::tolower);
+	while (i < level.length())
+	{
+		level[i] = std::tolower(level[i]);
+		i++;
+	}
+	i = 0;
 	while (i < 4)
 	{
 		if (level == levels[i])
