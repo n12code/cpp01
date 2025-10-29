@@ -6,12 +6,12 @@
 /*   By: nbodin <nbodin@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 14:49:36 by nbodin            #+#    #+#             */
-/*   Updated: 2025/10/22 22:47:51 by nbodin           ###   ########lyon.fr   */
+/*   Updated: 2025/10/29 13:54:47 by nbodin           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANB_HPP
-# define HUMANB_HPP
+#ifndef HUMAN_B_HPP
+# define HUMAN_B_HPP
 
 # include <iostream>
 # include "Weapon.hpp"
